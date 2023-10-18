@@ -1,6 +1,6 @@
 import React, { useState } from "react";
  
-const AddBlogs = ({ blog, setBlog, Blogs }) => {
+const AddBlogs = ({ blog, setBlog}) => {
 
     const [title, setTitle] = useState('')
     const [author, setAuthor] = useState('')
@@ -9,7 +9,7 @@ const AddBlogs = ({ blog, setBlog, Blogs }) => {
     
     const handleAddBlog = (event) => {
         event.preventDefault()
-        console.log('add blog button pressed.', title, author, url, likes)
+        //console.log('add blog button pressed.', title, author, url, likes)
 
         const newBlog = {
             'title': title,
@@ -18,13 +18,13 @@ const AddBlogs = ({ blog, setBlog, Blogs }) => {
             'likes': likes,
         }
         /* const updatedBlogs = Blogs.concat(newBlog)
-        console.log(updatedBlogs) */
+        //console.log(updatedBlogs) */
+
         setBlog([...blog, newBlog])
         setTitle('')
         setAuthor('')
         setUrl('')
         setLikes(0)
-
     }
 
     const handletitleChange = (event) => {
