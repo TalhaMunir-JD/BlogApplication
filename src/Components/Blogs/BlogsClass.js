@@ -33,8 +33,9 @@ const BlogsClass = () => {
                 <h3>Blogs here</h3>
             </div>
             <AddBlogs blog={blog} setBlog={setBlog} Blogs={Blogs}/>
+            {console.log(blog)}
             <DisplayBlogs blog={blog}/>
-            <SearchBlogs Blogs={Blogs} />
+            <SearchBlogs blog={blog} />
         </div>
     )
 }
