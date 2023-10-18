@@ -2,19 +2,19 @@
 import React, { useState } from "react"
 import DisplayBlogs from "./DisplayBlogs"
 
-const SearchBlogs = ({ Blogs }) => {
+const SearchBlogs = ({ blog }) => {
     const [searchQuery, setSearchQuery] = useState('')
-    const [filteredPeople, setfilteredPeople] = useState(Blogs)
+    const [filteredPeople, setfilteredPeople] = useState(blog)
 
 
     const handlequeryChange = (event) => {
         const query = event.target.value
         setSearchQuery(query)
-        const filteredContacts = Blogs.filter(
-            blog=> blog.title.toLowerCase().includes(searchQuery.toLowerCase())
+        const filteredContacts = blog.filter(
+            b => b.title.toLowerCase().includes(searchQuery.toLowerCase())
         )
         setfilteredPeople(filteredContacts)
-        console.log(filteredPeople)
+        //console.log(filteredPeople)
     }
 
 
