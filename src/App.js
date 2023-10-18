@@ -1,5 +1,5 @@
 import React from "react";
-import LoginScreen from "./Components/LoginScreen";
+import LoginScreen from "./Components/Login/LoginScreen";
 import BlogsClass from "./Components/Blogs/BlogsClass";
 
 const App = () => {
